@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+
+{% block body  %}
+
+<div class="intro">
+     
+        <div class="display">
+            {% if gameOver == 1 %}
+                <h2>You Lost The Game</h2>
+            {% elif gameOver == 2 %}
+                <h2>You Won The Game</h2>
+            {% elif gameOver == 3 %}
+                <h2>It's A Tie</h2>
+
+            {% endif %}
+            <div>
+                {% if gameOver == 0 %}
+                    <h2>Dealer's Cards count ???</h2>
+                {% else %}
+                    <h2>Dealer's Cards count {{dealerScore}}</h2>
+                {% endif %}
+
+                {% if gameOver == 0 %}
+                    <img  class="card" src="/static/img/purple_back.png">
+                {% else %}
+                    <img  class="card" src="/static/img/{{deck[0]}}.png">
+                    {% endif %}
+                {% for item in dealerIndex_key %}
+                    {% if item  %}
+                        <img  class="card" src="/static/img/{{deck[item]}}.png">
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div>
+                {% for item in playerIndex_key %}
+                    <img  class="card" src="/static/img/{{deck[item]}}.png">
+                {% endfor %}
+
+   
+                <h2>Player's Cards count: {{playerScore}}</h2>
+            
+            </div>
+        </div>
+
+        <div class="buttons_line">
+            
+            {% if not gameOver %}
+            <a href="/hitMe">Hit Me</a>
+            <a href="/stand">Stand</a>
+            {% else %}
+            <a href="/hitMe" class="disabled">Hit Me</a>
+            <a href="/stand" class="disabled">Stand</a>
+            
+            {% endif %}    
+
+            {% if doubleIndex %}
+              <a href="/splitHand">Split Hand</a>
+            {% endif %}    
+
+
+
+
+        </div>
+        {% if gameOver != 0 %}
+            <br>
+            <a href="/" class="repeat">Another?</a>
+        {% endif %}    
+
+</div>
+
+{% endblock %}

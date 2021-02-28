@@ -1,0 +1,39 @@
+body{
+    background-image: url('/static/img/home_background.jpg');
+    background-size: cover;
+    height:auto
+    
+}
+.intro{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+.intro h1{
+    font-size: 80px;
+}
+.intro h2{
+    font-size: 40px;
+}
+a{
+    background-color: transparent;
+    border: 2px double black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+.card{
+    width: 10%;
+}
+
