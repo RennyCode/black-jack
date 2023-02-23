@@ -4,14 +4,14 @@ A single webpage game of Black Jack made with flask-pyhton, the game is between 
 
 <div style = "padding-bottom: 150; padding-top: 150;">
   <p align="center">
-    <img src="/pic1.png"  style = " height: 350;  display:block; margin: auto; width:35%;"/>
-    <img src="/pic2.png"  style = " height: 350;  display:block; margin: auto; width:35%;"/>
+    <img src="/pic1.png"  style = " height: 350;  display:block; width:35%;"/>
+    <img src="/pic2.png"  style = " height: 350;  display:block; width:35%;"/>
   </p>
 </div>
  <div>
    <p align="center">
-    <img src="/pic3.png"  style = " height: 350;  display:block; margin-right: 25%;  width:35%;"/>
-    <img src="/pic4.png"  style = " height: 350;  display:block; margin-left: auto; margin-right:auto; width:35%;"/>
+    <img src="/pic3.png"  style = " height: 350;  display:block; width:35%;"/>
+    <img src="/pic4.png"  style = " height: 350;  display:block; width:35%;"/>
    </p>
 </div>
 
